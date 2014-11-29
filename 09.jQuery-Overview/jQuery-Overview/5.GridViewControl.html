@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>5.Grid View Control</title>
+    <script src="libs/jquery-2.1.1.min.js"></script>
+    <style>
+        /*It is not worth to add css file only for this*/
+        table, tr, td, th {
+            border: 1px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    </div>
+    <script src="scripts/5.GridViewControl.js"></script>
+    <script>
+        // I'm not sure if I understood the exercise condition correct!
+        var container = $('#container'),
+            text = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15'];
+
+        // create table with 3 rows and 5 cols and id pesho
+        addTable(container, 3, 5, text, 'pesho');
+
+        var $table = $('#pesho');
+        // add table head to the table
+        addHeader($table, 5, text, 'theadId');
+
+        // get td with text "3"
+        var $td = $('td').filter(function () {
+            return $(this).text() === '3';
+        });
+
+        // add Table to a td(cell)
+        addTable($td, 3, 3, text, 'innerTable');
+    </script>
+</body>
+</html>

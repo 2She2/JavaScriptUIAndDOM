@@ -1,0 +1,26 @@
+﻿<!--Use left and right arrows to move Mario-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Super Mario</title>
+    <style>
+        #backgroundSVG {
+            z-index: 0;
+            position: absolute;
+        }
+
+        #animationContainer {
+            z-index: 1;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="backgroundSVG"></div>
+    <div id="animationContainer"></div>
+    <script src="scripts/raphael-min.js"></script>
+    <script src="scripts/kinetic-v5.1.0.min.js"></script>
+    <script src="scripts/super-mario-background.js"></script>
+    <script src="scripts/super-mario.js"></script>
+</body>
+</html>

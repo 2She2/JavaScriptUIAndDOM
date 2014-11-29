@@ -1,0 +1,30 @@
+table, tr, td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    font-family: Arial;
+}
+
+thead {
+    background-color: #A6A6A6;
+    color: white;
+    text-align: center;
+}
+
+td {
+    padding: 2px;
+}
+
+    td:first-child {
+        text-align: center;
+    }
+
+    td:nth-child(2) {
+        padding-right: 10px;
+    }
+
+tr:nth-child(2n) {
+    background-color: #D9D9D9;
+}

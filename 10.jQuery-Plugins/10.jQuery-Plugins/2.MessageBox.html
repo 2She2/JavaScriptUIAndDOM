@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="libs/jquery-2.1.1.min.js"></script>
+    <script src="scripts/2.MessageBox.js"></script>
+</head>
+<body>
+    <div id="message-box"></div>
+    <script>
+        var $msgBox = $('#message-box');
+
+        $msgBox.messageBox();
+        $msgBox.success('success message');
+
+        // We want the first message to hide, then to show the other one
+        setTimeout(function () {
+            $msgBox.error('error message');
+        }, 4000);
+        
+    </script>
+</body>
+</html>

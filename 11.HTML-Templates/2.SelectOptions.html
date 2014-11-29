@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lectures table</title>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/x-handlebars-template" id="post-template">
+        <select>
+            {{#items}}
+            <option value="{{value}}">{{{option}}}</option>
+            {{/items}}
+        </select>
+    </script>
+    <script src='libs/handlebars-v1.3.0.js'></script>
+    <script src="scripts/2.SelectOptions.js"></script>
+    <script>
+        /* globals document, Handlebars */
+        'use strict'
+
+        var optionsTemplateHtml,
+            optionsTemplate,
+            items;
+
+        items = getSelectOptions();
+
+        optionsTemplateHtml = document.getElementById('post-template').innerHTML;
+        optionsTemplate = Handlebars.compile(optionsTemplateHtml);
+        document.getElementById('root').innerHTML = optionsTemplate(items);
+    </script>
+</body>
+</html>
